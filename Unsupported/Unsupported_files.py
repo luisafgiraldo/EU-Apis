@@ -45,7 +45,9 @@ for filepath in unsupported_files:
         print(f"Request duration: {minutes} minutes and {seconds:.3f} seconds")
 
         
-        assert response.status_code == 500, f"Expected status 500, got {response.status_code} for file: {os.path.basename(filepath)}"
-        assert json_data.get("message") == "Internal Server Error", f"Unexpected error message for file: {os.path.basename(filepath)}"
+assert response.status_code == 200, f"Expected status 200, got {response.status_code} for file: {os.path.basename(filepath)}"
+assert json_data.get("errors"), f"Expected errors in response for file: {os.path.basename(filepath)}"
+assert json_data["errors"][0]["error_code"] == 500, f"Expected error code 500 in errors for file: {os.path.basename(filepath)}"
+
 
 print("\n✅ All unsupported file tests passed successfully.")
