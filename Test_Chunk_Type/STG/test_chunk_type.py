@@ -31,6 +31,12 @@ except json.JSONDecodeError as e:
     print("Raw response text:", response.text[:300])
     sys.exit(1)
 
+# Verificar que la respuesta sea un diccionario
+if not isinstance(data, dict):
+    print(f"❌ Unexpected response format. Expected dict, got {type(data).__name__}")
+    print("Response content:", data)
+    sys.exit(1)
+
 # Analizar chunks
 accepted_types = {"marginalia", "text", "table", "figure"}
 grounding_pages = set()
@@ -75,6 +81,7 @@ try:
 except AssertionError as e:
     print(str(e))
     sys.exit(1)
+
 
 
 #------------------------------------------------------------
