@@ -1,0 +1,27 @@
+name: time to process files ADE - STG
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  process-files-ADE-STG:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout repo
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 📦 Install dependencies
+      run: pip install requests
+
+    - name: 🧾 Debug - Show files
+      run: |
+        pwd
+        ls -R
+    - name: 🚀 Run image request test
+      run: python measuring_time/time.py
