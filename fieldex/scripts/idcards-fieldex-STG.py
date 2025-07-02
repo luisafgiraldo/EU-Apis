@@ -2,9 +2,9 @@ import json
 import requests
 
 def process_documents(retry_count=2):
-    VA_API_KEY = 'NXFlNjB3NDJsb2ZzZjljb3Zhc2lmOmVrWmdLQmlRY1ZsTUNhRlVYbnE5WU94MWhVZ3p4OUZa'
+    VA_API_KEY = 'eXR5OWR3bHdibTkwenk3Z2lwb3B0OldYZ1hpZFQ2M01OZWE1VnBJcjBMaENRaWVYVTFvZlJk'
     headers = {"Authorization": f"Basic {VA_API_KEY}"}
-    url = "https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis"
+    url = "https://api.va.eu-west-1.landing.ai"
 
     base_pdf_path = r"fieldex/files"
     pdf_name = "PDF-id-cards.pdf"
