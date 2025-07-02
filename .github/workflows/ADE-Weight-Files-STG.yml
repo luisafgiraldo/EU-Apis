@@ -1,0 +1,23 @@
+name: ADE-Weight-Files-STG
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  ADE-Weight-Files-STG:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run ADE-Weight-Files-STG
+        run: python weight_the_files/weight_files-STG.py
