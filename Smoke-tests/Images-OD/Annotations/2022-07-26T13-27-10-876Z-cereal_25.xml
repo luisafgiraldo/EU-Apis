@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<annotation>
+  <object>
+    <pose>Unspecified</pose>
+    <occluded>0</occluded>
+    <difficult>0</difficult>
+    <truncated>0</truncated>
+    <name>Screw</name>
+    <labeler>aecf180d-9dfa-4966-9ece-e9dccdc0d26d</labeler>
+    <bndbox>
+      <xmax>1285</xmax>
+      <xmin>800</xmin>
+      <ymax>1276</ymax>
+      <ymin>777</ymin>
+    </bndbox>
+  </object>
+  <object>
+    <pose>Unspecified</pose>
+    <occluded>0</occluded>
+    <difficult>0</difficult>
+    <truncated>0</truncated>
+    <name>Screw</name>
+    <labeler>aecf180d-9dfa-4966-9ece-e9dccdc0d26d</labeler>
+    <bndbox>
+      <xmax>1926</xmax>
+      <xmin>1645</xmin>
+      <ymax>809</ymax>
+      <ymin>357</ymin>
+    </bndbox>
+  </object>
+  <filename>cereal_25.jpg</filename>
+  <segmented>0</segmented>
+  <size>
+    <height>2048</height>
+    <width>2048</width>
+  </size>
+</annotation>

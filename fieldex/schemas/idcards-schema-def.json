@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "Full name of the individual"
+          },
+          "ID number": {
+            "type": "integer",
+            "description": "Unique identification number of the individual"
+          },
+          "Address": {
+            "type": "string",
+            "description": "Residential address of the individual"
+          },
+          "Restrictions": {
+            "type": "boolean",
+            "description": "Indicates if there are any restrictions/disabilities on the individual"
+          },
+          "Date of birth": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of birth of the individual in YYYY-MM-DD format"
+          }
+        },
+        "required": [
+          "Name",
+          "ID number",
+          "Address",
+          "Restrictions",
+          "Date of birth"
+        ]
+      }
+    }
+  }
+}
