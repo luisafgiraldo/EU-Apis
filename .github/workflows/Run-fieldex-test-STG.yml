@@ -1,0 +1,27 @@
+
+name: Run-FieldEx-Pdf with severaldocs-STG
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  Run-fieldex-sev-docs-happy: 
+    name: Run-fieldex-of-pdf-w-several-docs
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+    - name: Run Field Extraction script 
+      run: python fieldex/scripts/idcards-fieldex-STG.py
