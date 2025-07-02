@@ -25,7 +25,13 @@ def process_documents(retry_count=2):
 
     response = requests.request("POST", url, headers=headers, files=files, data=payload)
 
-    output_data = response.json()["data"]
+    response_json = response.json()
+    if "data" not in response_json:
+    print("Error: 'data' key not found in response")
+    print("Full response:", response_json)
+    raise Exception("API response missing 'data' key")
+
+    output_data = response_json["data"]
     extracted_info = output_data["extracted_schema"]
     print(extracted_info)
 
