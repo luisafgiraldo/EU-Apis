@@ -2,10 +2,10 @@ import requests
 import time
 import os
 
-url = "https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis"
+url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 
 headers = {
-    "Authorization": "Basic YW1ocTZseGltNzM1Z2txdmVpNWNzOnVqV0FvVEQ1eHlMSzNqVDA0Mkg0NzJ0RTVQU1ZFQ1JG",
+    "Authorization": "Basic eXR5OWR3bHdibTkwenk3Z2lwb3B0OldYZ1hpZFQ2M01OZWE1VnBJcjBMaENRaWVYVTFvZlJk",
 }
 
 # Lista de archivos (imágenes + PDF)
