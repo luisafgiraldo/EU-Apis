@@ -1,0 +1,41 @@
+
+name: goodimg-parallelreq
+
+on:
+  workflow_dispatch:  # Execute manually only
+permissions:
+  contents: read
+  actions: read
+  id-token: write
+
+jobs:
+  run-ADE-tier3:
+    name: Run GOODIMG AGDE Tier 3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Give execution permissions
+        run: chmod +x goodimg-parallelreq/ag-de/GA-stg-tier3-run-agde.sh
+
+      - name: Run ADE Tier 3 script
+        run: ./goodimg-parallelreq/ag-de/GA-stg-tier3-run-agde.sh
+
+      - name: Show content of the T3 log.
+        # Added if: always() here too, so this step runs even if the script fails
+        # to ensure we try to cat the log or show the error message.
+        if: always()
+        run: cat goodimg-parallelreq/reports/ADE-T3_goodimg_report.txt || echo "❌ The file does not exist or is empty"
+
+      - name: Upload ADE-T3_goodimg_report
+        # Added if: always() to ensure artifact upload is attempted
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: request-log-ADE-tier3
+          path: goodimg-parallelreq/reports/ADE-T3_goodimg_report.txt
+          # Optional: if you want to upload even if the file doesn't exist (it will upload an empty artifact)
+          # otherwise, it might error if the file is missing.
+          # For robustness if the script fails before creating the file:
+          if-no-files-found: ignore # or 'warn' or 'error' (default)
