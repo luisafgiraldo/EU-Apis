@@ -1,0 +1,35 @@
+name: Run Rate Limit Tests ADE STG
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-tier-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Ensure Loan+Form.pdf exists
+        run: |
+          if [ ! -f "./ratelimit/Loan+Form.pdf" ]; then
+            echo "❌ Missing Loan+Form.pdf"
+            exit 1
+          fi
+      - name: Run Tier 1 Test
+        run: node ratelimit/ratelimit-testADE-Tier1.js --tier staging --duration 3 --rpm 25
+
+      - name: Run Tier 2 Test
+        run: node ratelimit/ratelimit-testADE-Tier2.js --tier staging --duration 3 --rpm 40
+
+      - name: Run Tier 3 Test
+        run: node ratelimit/ratelimit-testADE-Tier3.js --tier staging --duration 3 --rpm 100
