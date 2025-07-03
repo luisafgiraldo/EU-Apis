@@ -1,0 +1,46 @@
+
+name: Run-Page-Limit-tests-STG
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  Run-PL-happy: 
+    name: Run-PL-happy-&-pages-T3
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+    - name: Run tier validation script
+      run: python page-limit/pl-happy/pl-happy.py
+   
+  Run-PL-unhappy:
+    name: Run-PL-unhappy-AllTiers
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run tier validation script
+      run: python page-limit/pl-unhappy/pl-unhappy.py
