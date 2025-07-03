@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY="eXpqM2lvN21hb2xrc28wZDA4b2NuOndtbmlRdlRTQ1VOT0FhTUhTWXJWZFpIUk9ZaGFXYk9o"
+API_KEY="bXdyZ3Iwb2NlcHlsbHV4ZGttOTF6OkJNMHBoeURrUURGbmxXWVFocTVNZDBLdzdGNnFqV0ly"
 PARALLEL_REQUESTS=100
 TOTAL_REQUESTS=100
 STATUS_LOG="status_codes.log"
@@ -20,7 +20,7 @@ process_request() {
   echo "Request $i: start" > "$request_log"
   start_time=$(date +%s.%N)
   response=$(curl -X 'POST' \
-    'https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis' \
+    'https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis' \
     -H "Authorization: Basic $API_KEY" \
     -H 'accept: application/json' \
     -H 'Content-Type: multipart/form-data' \

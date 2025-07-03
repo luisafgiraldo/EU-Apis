@@ -17,7 +17,7 @@ for (let i = 0; i < args.length; i += 2) {
 // Set default values and parse arguments
 const concurrency = 1;
 const tier = params.tier || 'staging';
-const apiKey = params.apikey || 'NWM3amtjdnBoejN6anludHl5cnU1OkFBbVoyNWlJNXoyZGVkWmZuc0tSWU1XeWU1MXpqbGQ3';
+const apiKey = params.apikey || 'bXdyZ3Iwb2NlcHlsbHV4ZGttOTF6OkJNMHBoeURrUURGbmxXWVFocTVNZDBLdzdGNnFqV0ly';
 const rpm = parseInt(params.rpm) || 100;
 const durationMinutes = parseInt(params.duration) || 3;
 const TOTAL_REQUESTS = Math.ceil(rpm * durationMinutes);
@@ -29,7 +29,7 @@ let requestsPerMinute = new Map();
 let failedRequestsPerMinute = new Map();
 
 const API_URL = {
-  staging: 'https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis',
+  staging: 'https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis',
   production: 'https://api.va.landing.ai/v1/tools/agentic-document-analysis',
   dev: 'https://api.va.dev.landing.ai/v1/tools/agentic-document-analysis'
 }[tier];

@@ -5,9 +5,9 @@ import json
 import re
 import sys  # Import sys for exiting with a status code
 
-url = "https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis"
+url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 headers = {
-    "Authorization": "Basic eTh6ZG9jcnV3aHhwb20wdHdoNDJ0OlplQ00ydTdsSVBTUG1zQW1JOG5BVHRiY3pTamE5eEx4"
+    "Authorization": "Basic bXdyZ3Iwb2NlcHlsbHV4ZGttOTF6OkJNMHBoeURrUURGbmxXWVFocTVNZDBLdzdGNnFqV0ly"
 }
 start_time = time.time()
 with open(r"page-limit/pdfs/Marco_Aurelio_Meditaciones_100_pages.pdf", "rb") as f:

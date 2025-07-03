@@ -6,25 +6,25 @@ pdf_path = "page-limit/pdfs/Marco_Aurelio_Meditaciones_101_pages.pdf"
 tiers = [
     {
         "name": "tier1",
-        "api_key": "cXc3OHczMmhkMmY3a3QxaHJrc3lhOlVqUzM0U3lrM1BqczlKN0tJMVNxRnJFOExhcmpWbHM1",
+        "api_key": "Mndjb2h6emx3a200NTFzNnJzOWNkOlhWUUIxeENNV05Lc1ZZVEZHY01nY0lRbGJsN2FEWmh1",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 50 pages."
     },
     {
         "name": "tier2",
-        "api_key": "eTcyM3p2eHloMTQ2Y25xdmg0YXl6OlV0cnAxdFVNVGk1VUpKcUUzMzNqNFZMSmZRRjYwTnRu",
+        "api_key": "ZzlycHF2YXRoZnF3bW5nNXlkdjJ2OlloaGVieUthdnlCTWZid2hWYXc0c3ZiWE5PVGxsd1Vj",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 50 pages."
     },
     {
         "name": "tier3",
-        "api_key": "YW1ocTZseGltNzM1Z2txdmVpNWNzOnVqV0FvVEQ1eHlMSzNqVDA0Mkg0NzJ0RTVQU1ZFQ1JG",
+        "api_key": "bXdyZ3Iwb2NlcHlsbHV4ZGttOTF6OkJNMHBoeURrUURGbmxXWVFocTVNZDBLdzdGNnFqV0ly",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 100 pages."
     }
 ]
 
-url = "https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis"
+url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 
 results = []
 
