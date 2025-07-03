@@ -2,7 +2,7 @@ import requests
 import time
 import sys  # Import the sys module
 
-url = "https://api.va.staging.landing.ai/v1/tools/agentic-document-analysis"
+url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 
 # Ensure to uncomment the specific file you want to send in the request
 files = {
@@ -12,7 +12,7 @@ files = {
 
 headers = {
     #Zero-credits
-    "Authorization": "Basic eDZlZzN6NWQyaTJxa3hnNndqYng1OnNsT0pVY2RUYXZKbExObjhKNkQzZmJ2dXBuVlFhZWk3",
+    "Authorization": "Basic eXR5OWR3bHdibTkwenk3Z2lwb3B0OldYZ1hpZFQ2M01OZWE1VnBJcjBMaENRaWVYVTFvZlJk",
 }
 
 # Record the start time
