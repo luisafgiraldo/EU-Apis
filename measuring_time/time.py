@@ -5,7 +5,7 @@ import os
 url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 
 headers = {
-    "Authorization": "Basic eXR5OWR3bHdibTkwenk3Z2lwb3B0OldYZ1hpZFQ2M01OZWE1VnBJcjBMaENRaWVYVTFvZlJk",
+    "Authorization": "Basic bmRmMW9wMmtoNml0MnE3a2xzZWJ0OkhUMGcxOVh4ME5FaXdEZ1g0aGNPQWk0U1FRTFBwSWxq",
 }
 
 # Lista de archivos (imágenes + PDF)
