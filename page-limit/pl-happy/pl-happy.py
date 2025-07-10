@@ -7,7 +7,7 @@ import sys  # Import sys for exiting with a status code
 
 url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 headers = {
-    "Authorization": "Basic bXdyZ3Iwb2NlcHlsbHV4ZGttOTF6OkJNMHBoeURrUURGbmxXWVFocTVNZDBLdzdGNnFqV0ly"
+    "Authorization": "Basic cDJrenRuYTFzd20ycDVvNWMxb3RyOnJKNktlYzg0SUIzN09yQ0NDMUYxQzRUYWUwbG9DYjNS"
 }
 start_time = time.time()
 with open(r"page-limit/pdfs/Marco_Aurelio_Meditaciones_100_pages.pdf", "rb") as f:
