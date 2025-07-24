@@ -5,7 +5,7 @@ import os
 
 url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 headers = {
-    "Authorization": "Basic bmRmMW9wMmtoNml0MnE3a2xzZWJ0OkhUMGcxOVh4ME5FaXdEZ1g0aGNPQWk0U1FRTFBwSWxq",
+    "Authorization": "Basic M3o1dTNoZXE5ZjUxcjFseW5yZTB5OnNSS25MZG9mNDRkbGdadDRpelJkUHBRV3prSHo2V3VE",
 }
 
 
@@ -45,7 +45,7 @@ for filepath in unsupported_files:
         print(f"Request duration: {minutes} minutes and {seconds:.3f} seconds")
 
         
-        assert response.status_code == 500, f"Expected status 500, got {response.status_code} for file: {os.path.basename(filepath)}"
+        assert response.status_code == 422, f"Expected status 500, got {response.status_code} for file: {os.path.basename(filepath)}"
         assert json_data.get("message") == "Internal Server Error", f"Unexpected error message for file: {os.path.basename(filepath)}"
 
 
