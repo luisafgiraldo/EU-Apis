@@ -3,7 +3,7 @@ import requests
 
 def process_documents(retry_count=2):
     
-    VA_API_KEY = 'M3o1dTNoZXE5ZjUxcjFseW5yZTB5OnNSS25MZG9mNDRkbGdadDRpelJkUHBRV3prSHo2V3VE'
+    VA_API_KEY = 'eDVrazB3ZmYwZW9wejVhbndma3BwOmY5c2VpZHpqS1pGdjJkQzJGajhzcVhrdXgyclJ4cmJr'
     headers = {"Authorization": f"Basic {VA_API_KEY}"}
     url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 
