@@ -6,19 +6,19 @@ pdf_path = "page-limit/pdfs/Marco_Aurelio_Meditaciones_101_pages.pdf"
 tiers = [
     {
         "name": "tier1",
-        "api_key": "MGprNXV5MGpvc3RrdW02Y29vNGE1OnZQcjhRWTJFUDlob1FrRlp6Wkw5TFJsVlpVWGtrRFNF",
+        "api_key": "eXNjaW9oa21tNGdicmplam9wbjBzOjVQbDlEQ0czZVAxRzNGZmhnYlc2bmNJN0FOWUpRTkM2",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 50 pages."
     },
     {
         "name": "tier2",
-        "api_key": "cGFkbHhuZnluZnh3N3c5M2Y4dnh4OmRkdzdqWkFpTW5WVm1ZWnJyMjQxa1UxdkI1ckRCenFG",
+        "api_key": "d2xoaHpid2RrZ2M4amdsdmhmczhiOmsxNGJ6bGNFaW05bkdzRFA3am5EM0VIMzR0U3Fpb25I",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 50 pages."
     },
     {
         "name": "tier3",
-        "api_key": "bDdzYXBjM2F1bnBodnhmbGNlNnAxOnNyc1loVDFMTGJENHNUSTc0dzU2em45VUkyZWJkWjNz",
+        "api_key": "cGl4ODVkdWNsamYyNTYwcXNhajJqOkhtaklqWWRiMXFkQ2dUeVBZMXFORkY0QVJEMzVQSWVy",
         "expected_status": 422,
         "expected_message": "PDF must not exceed 100 pages."
     }
