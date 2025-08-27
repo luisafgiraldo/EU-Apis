@@ -46,7 +46,7 @@ for filepath in unsupported_files:
 
         
         assert response.status_code == 422, f"Expected status 422, got {response.status_code} for file: {os.path.basename(filepath)}"
-        assert json_data.get("message") == "Failed to open image. Ensure it is a valid image file.", (f"❌ Unexpected error message for file: {os.path.basename(filepath)} - Got: {json_data.get('message')}")
+        assert json_data.get("message") == "Invalid image provided.", (f"❌ Unexpected error message for file: {os.path.basename(filepath)} - Got: {json_data.get('message')}")
 
 
 print("\n✅ All unsupported file tests passed successfully.")
