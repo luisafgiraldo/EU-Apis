@@ -6,7 +6,7 @@ from collections import Counter
 
 url = "https://api.va.eu-west-1.landing.ai/v1/tools/agentic-document-analysis"
 headers = {
-    "Authorization": "Basic eDVrazB3ZmYwZW9wejVhbndma3BwOmY5c2VpZHpqS1pGdjJkQzJGajhzcVhrdXgyclJ4cmJr"
+    "Authorization": "Basic bHU4ZXlraHBjeWE2NmpjN2YxY2M4OjVNRlpramdpTzB1TVRIV0FnanVqcTNqVE5VYVlLSGh4"
 }
 
 # Medir tiempo de ejecución
