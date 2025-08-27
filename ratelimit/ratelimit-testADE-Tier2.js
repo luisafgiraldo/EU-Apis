@@ -17,7 +17,7 @@ for (let i = 0; i < args.length; i += 2) {
 // Set default values and parse arguments
 const concurrency = 1;
 const tier = params.tier || 'staging';
-const apiKey = params.apikey || 'cGFkbHhuZnluZnh3N3c5M2Y4dnh4OmRkdzdqWkFpTW5WVm1ZWnJyMjQxa1UxdkI1ckRCenFG';
+const apiKey = params.apikey || 'd2xoaHpid2RrZ2M4amdsdmhmczhiOmsxNGJ6bGNFaW05bkdzRFA3am5EM0VIMzR0U3Fpb25I';
 const rpm = parseInt(params.rpm) || 40;
 const durationMinutes = parseInt(params.duration) || 3;
 const TOTAL_REQUESTS = Math.ceil(rpm * durationMinutes);
